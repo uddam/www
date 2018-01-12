@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<!--
+Template Name: Abele
+Author: <a href="http://www.os-templates.com/">OS Templates</a>
+Author URI: http://www.os-templates.com/
+Licence: Free to use under our free template licence terms
+Licence URI: http://www.os-templates.com/template-terms
+-->
+<html>
+<head>
+<title>Uddam Foundation</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+<link rel="shortcut icon" type="image/x-icon" href="logo-only.svg" />
+<script>
+  var sections = 
+  [
+    ["intro", "mainarea", "ctmain"], //0 = home page
+    ["ctb"], //1 =Orphanage
+    ["ctc"], //2 = sewing
+    ["ctd"], //3
+    ["cte"],//4
+    ["ctf"],//5
+    ["ctg"],//6
+    ["cth"],//7
+    ["cti"],//8
+    ["ctj"],//9
+  ];
+
+  var navsections = 
+  [
+    ["navhome"], // 0 = home page
+    ["navorphanage"], //1 
+    ["navschool"], //2 
+    ["navprojects","navprojecta"], //3
+    ["navprojects","navprojectb"], //4
+    ["navprojects","navprojectc"], //5
+    ["navprojects","navprojectd"], //6
+    ["navprojects","navprojecte"], //7
+    ["navprojects","navprojectf"], //8
+   ["navabout"], //9
+  ];
+  function show(pageno){
+    for(i =0;i<sections.length;i++){
+      if(pageno!=i){
+        for(j=0;j<sections[i].length;j++){
+          document.getElementById(sections[i][j]).style.display = 'none';    
+        }
+        for(j=0;j<navsections[i].length;j++){
+          document.getElementById(navsections[i][j]).classList.remove('active');
+        }
+      }
+    }
+
+    for(j=0;j<sections[pageno].length;j++){
+      document.getElementById(sections[pageno][j]).style.display = 'block' ;    
+    }
+        
+    for(k=0;k<navsections[pageno].length;k++){
+      document.getElementById(navsections[pageno][k]).className='active';
+    }
+  }
+  
+  function showHome(){
+    show(0);
+  }
+</script>
+
+</head>
+<body id="top" onload="show(0)">
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row1">
+  <header id="header" class="clear"> 
+    <!-- ################################################################################################ -->
+    <div id="logo" class="fl_left">
+      <h1><div class="logocontainer"><img src="logo.svg"/></div></h1>
+    </div>
+    <!-- ################################################################################################ -->
+    <nav id="mainav" class="fl_right">
+      <ul class="clear">
+        <li id="navhome"><a href="#" onclick="show(0)">Home</a></li>
+        <li id="navorphanage"><a href="#" onclick="show(1)">Orphanage</a></li>
+        <li id="navschool"><a href="#" onclick="show(2)">School</a></li>
+        <li id="navprojects"><a class="drop" href="#">Projects</a>
+          <ul>
+            <li id="navprojecta"><a href="#" onclick="show(3)">Women Empowerment</a></li>
+            <li id="navprojectb"><a href="#" onclick="show(4)">Scholarship</a></li>
+            <li id="navprojectc"><a href="#" onclick="show(5)">Medical Camp</a></li>
+            <li id="navprojectd"><a href="#" onclick="show(6)">Fish Farming</a></li>
+            <li id="navprojecte"><a href="#" onclick="show(7)">Essay Competition</a></li>
+            <li id="navprojectf"><a href="#" onclick="show(8)">Literacy Program</a></li>
+          </ul>
+        </li>
+        <li id="navabout"><a href="#" onclick="show(9)">About</a></li>
+      </ul>
+    </nav>
+    <!-- ################################################################################################ -->
+  </header>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row2 bgded" style="background-image:url('images/bgcolor.jpg');">
+  <div class="overlay">
+    <div id="intro" class="clear"> 
+      <!-- ################################################################################################ -->
+      <article class="one_third first">
+        <h3 class="heading">MAKE AN ORPHAN SMILE</h3>
+        <ul class="nospace">
+          <li><img src="images/orphansmile.jpg"></li>
+        </ul>
+        <p class="link"><a href="#" onclick="show(1)">Read More &raquo;</a></p>
+      </article>
+      <article class="one_third">
+        <h3 class="heading">THE STORY OF TAPOSHI</h3>
+        <ul class="nospace">
+          <li><img src="images/taposi.jpg"></li>
+        </ul>
+        <p class="link"><a href="#" onclick="show(3)">Read More &raquo;</a></p>
+      </article>
+      <article class="one_third">
+        <h3 class="heading">EDUCATION PROGRAMS</h3>
+        <ul class="nospace">
+          <li><img src="images/handwriting.jpg"></li>
+        </ul>
+        <p class="link"><a href="#" onclick="show(2)">Read More &raquo;</a></p>
+      </article>
+      <!-- ################################################################################################ -->
+    </div>
+  </div>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div id="mainarea" class="wrapper row3">
+  <main class="container clear"> 
+    <!-- main body -->
+    <!-- ################################################################################################ -->
+    <div class="group">
+      <div class="one_half first">
+        <h2 class="heading themecolor centeralign btmspace-50">Uddam Scholarship</h2>
+        <figure id="featuredpost"><a href="forms/ScholarshipApplication.pdf"><img class="borderedbox" src="images/scholarship.jpg" alt="Scholarship Form"></a>
+          <figcaption>
+            <h2 class="heading">Download Application Form</h2>
+            <p class="shortintro">30 talent &amp; need-based monthly scholarship available for students between grade 9 - 12.&hellip;</p>
+            <p class="link"><a class="btn" href="forms/ScholarshipApplication.pdf">Download Now &raquo;</a></p>
+          </figcaption>
+        </figure>
+      </div>
+      <div class="one_half">
+        <h2 class="heading themecolor centeralign btmspace-50">Latest News</h2>
+        <ul id="latestposts" class="nospace">
+          <li class="clear">
+            <figure class="one_quarter first"><img class="borderedbox inspace-5" src="images/essaycomp.svg" alt="Essay Competition"></figure>
+            <article class="three_quarter">
+              <h2 class="heading">Uddam Essay Competition</h2>
+              <div class="meta">
+                <time>January 2018</time>
+              </div>
+              <p class="shortintro">Essay competition 2018 is now open&hellip;</p>
+              <p class="link"><a class="btn" href="#"  onclick="show(7)">Read More &raquo;</a></p>
+            </article>
+          </li>
+          <li class="clear">
+            <figure class="one_quarter first"><img class="borderedbox inspace-5" src="images/sewicon.svg" alt="Sewing Training"></figure>
+            <article class="three_quarter">
+              <h2 class="heading">42nd Sewing Training Workshop</h2>
+              <div class="meta">
+                <time>November 2017</time>
+              </div>
+              <p class="shortintro">Successful completion of training workshop&hellip;</p>
+              <p class="link"><a class="btn" href="#" onclick="show(3)">Read More &raquo;</a></p>
+            </article>
+          </li>
+          <li class="clear">
+            <figure class="one_quarter first"><img class="borderedbox inspace-5" src="images/schoolicon.svg" alt="New School Building"></figure>
+            <article class="three_quarter">
+              <h2 class="heading">New School Building</h2>
+              <div class="meta">
+                <time>April 2017</time>
+              </div>
+              <p class="shortintro">Two story new school building inaugurated to accomodate more students and classes&hellip;</p>
+              <p class="link"><a class="btn" href="#" onclick="show(2)">Read More &raquo;</a></p>
+            </article>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- ################################################################################################ -->
+    <!-- / main body -->
+    <div class="clear"></div>
+  </main>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div id="ctmain" class="wrapper row4">
+  <section id="cta" class="clear"> 
+    <!-- ################################################################################################ -->
+    <div class="center btmspace-50">
+      <h2 class="nospace">Other projects</h2>
+      <p class="nospace"></p>
+    </div>
+    <div class="group">
+      <div class="colour-1 one_half first">
+        <article class="group colour-1"> 
+          <!-- ################################################################################################ -->
+          <div class="one_half first"><img src="images/fish.jpg" alt=""></div>
+          <div class="one_half">
+            <h6 class="heading">Sustainable fish farming</h6>
+            <p class="link"><a class="btn" href="#" onclick="show(6)">Read More &raquo;</a></p>
+          </div>
+          <!-- ################################################################################################ -->
+        </article>
+      </div>
+      <div class="colour-2 one_half">
+        <article class="group colour-2"> 
+          <!-- ################################################################################################ -->
+          <div class="one_half first"><img src="images/clinicsmall.jpg" alt=""></div>
+          <div class="one_half">
+            <h6 class="heading">Medical Clinic for the local villagers</h6>
+            <p class="link"><a class="btn" href="#" onclick="show(5)">Read More &raquo;</a></p>
+          </div>
+          <!-- ################################################################################################ -->
+        </article>
+      </div>
+    </div>
+    <!-- ################################################################################################ -->
+    <div class="clear"></div>
+  </section>
+</div>
+
+
+<!-- ################################################################################################ -->
+<div id="ctb" class="wrapper row4">
+    <section id="cta" class="clear"> 
+        <!-- ################################################################################################ -->
+        <div class="center btmspace-50">
+          <h2 class="nospace">The Orphanage</h2>
+        </div>
+        <div class="first">
+          <article class="group"> 
+            <!-- ################################################################################################ -->
+            <div>
+              <img src="images/orphanage.jpg" alt="">
+            </div>
+            <div>
+              <p class="contentfont">
+                <br/>
+                The Uddam Foundation looks after the orphans. It is regarded as moral liability. The child home has been set up with a view to carrying out this responsibility. This home ensures comfortable and healthy environment possessing 100 decimal lands. This campus consists of a playground and a pond. Children study here in a sound environment.
+                <br/> <br/>
+                <img src="images/orphans.jpg" alt="">
+                <br/><br/>
+                The country does not have sufficient infrastructure to provide child services and place orphan children in proper foster care. As a result, children without parents often end up in the street. Uddam is trying its best within its capabilities to address the issue and provide a decent living condition and education opportunities to Orphan children.
+                27 orphan children are staying at the home currently and more than 50 children had graduated since the establishment.
+                <br/> <br/>
+                <img src="images/kitchen.jpg" alt="">
+                <br/><br/>Daily meals are prepared in the wood burning stoves. 
+                
+              </p>
+            </div>
+            <!-- ################################################################################################ -->
+          </article>
+        </div>
+        <!-- ################################################################################################ -->
+        <div class="clear"></div>
+      </section>
+</div>
+  
+<!-- ################################################################################################ -->
+<div id="ctc" class="wrapper row4">
+    <section id="cta" class="clear"> 
+      <div class="center btmspace-50">
+        <h2 class="nospace">The School</h2>
+      </div>
+      <div class="first">
+        <article class="group"> 
+          <div>
+            <p class="contentfont">
+              Education is the critical long terms means for a country to break out of poverty and related challenges. Back in 2014, Uddam started the school deep in the Brammandi village of Madaripur district as a pilot project. The demand, participation and appreciation was overwhelming. The school grew rapidly and Uddam soon expanded to a newly constructed building to accomodate more students and classes. This was a milestone achievement for the organization. The new building was inaugarated in 2017.
+              <br/> <br/>
+              <img src="images/schoolbuilding1.jpg" alt="">
+              <br/> <br/>
+              Here are some of the construction time photos.
+              <br/> <br/>
+              <img src="images/construction1.jpg" alt="">
+              <br/>
+              <img src="images/construction2.jpg" alt="">
+              <br/>
+              <img src="images/construction2.jpg" alt="">
+              <br/><br/>
+              Farm lands before construction <br/>
+              <img src="images/beforeconstruction.jpg" alt="">
+              <br/><br/>
+            </p>
+          </div>
+        </article>
+      </div>
+      <div class="clear"></div>
+    </section>
+  </div>
+
+<!-- ################################################################################################ -->
+<div id="ctd" class="wrapper row4">
+    <section id="cta" class="clear"> 
+      <div class="center btmspace-50">
+        <h2 class="nospace">Women Empowerment</h2>
+      </div>
+      <div class="first">
+        <article class="group"> 
+          <div>
+            <p class="contentfont">
+              <img src="images/selai.jpg" alt="">
+              <br/> <br/>
+              Empowering women is key to alleviate poverty. Uddam runs several programs to help women learn new skills and become productive. One of the most popular and successful programs Uddam has been running is the 3-month Sewing Training Workshop. The 42nd workshop just finished last November.
+              <br/> <br/>
+              <img src="images/taposi_big.jpg" alt="">
+              <br/><br/>
+              Taposhi Kundu refuse to accept a poverty-striken future for her children. She dreams of sending her children to school and their graduation one day. She is not willing to work hard. Mother of two - a lovely girl and a restless boy, Taposhi determines learn a professional skill so that she can work an contribute tot he earning of the family. She joined the 3-month long 42nd Uddam Sewing Training Workshop. Upon completion she started taking orders from the local customer. Nowadays she earns 5000-6000 taka every month. Even though her husband Dulal Kundu was intially hesistant, he is very happy at the outcome now. Taposhi's example is also inspiring other families and women within the village.
+              <br/> <br/>              
+            </p>
+          </div>
+        </article>
+      </div>
+      <div class="clear"></div>
+    </section>
+  </div>
+
+<!-- ################################################################################################ -->
+<div id="cte" class="wrapper row4">
+    <section id="cta" class="clear"> 
+      <div class="center btmspace-50">
+        <h2 class="nospace">Merit &amp; Need-based Scholarship Program</h2>
+      </div>
+      <div class="first">
+        <article class="group"> 
+          <div>
+            <p class="contentfont">
+              <img src="images/scholarship1.jpg" alt="">
+              <br/> <br/>
+              The poor talented students have the option to avail of the uddam talent pool scholarship. In every year, uddam talent pool scholarship is given to thirty five (35) students who are advantageous in merit but cannot carry on study for the lack of money.
+              The 2015 ceremony was <a href="http://www.dailynayadiganta.com/detail/news/30204?m=0">featured in the national daily - the Daily Nayadiganta</a>.
+              <br/> <br/>
+              The scholarship application form can be downloaded <a href="forms/ScholarshipApplication.pdf">here</a>.
+              <br/> <br/>              
+            </p>
+          </div>
+        </article>
+      </div>
+      <div class="clear"></div>
+    </section>
+  </div>
+
+<!-- ################################################################################################ -->
+<div id="ctf" class="wrapper row4">
+    <section id="cta" class="clear"> 
+      <div class="center btmspace-50">
+        <h2 class="nospace">Medical Camps</h2>
+      </div>
+      <div class="first">
+        <article class="group"> 
+          <div>
+            <p class="contentfont">
+              <img src="images/mobileclinic.jpg" alt="">
+              <br/> <br/>
+              Uddam brings  mobile medical camps and mobile eye camps to the rural people often with limited or no access to modern medical facilities.
+              <br/> <br/>              
+            </p>
+          </div>
+        </article>
+      </div>
+      <div class="clear"></div>
+    </section>
+  </div>
+
+<!-- ################################################################################################ -->
+<div id="ctg" class="wrapper row4">
+    <section id="cta" class="clear"> 
+      <div class="center btmspace-50">
+        <h2 class="nospace">Farming the future</h2>
+      </div>
+      <div class="first">
+        <article class="group"> 
+          <div>
+            <p class="contentfont">
+              <img src="images/pond.jpg" alt="">
+              <br/> <br/>
+              The goal of sustainable fish farming is two fold - (1) teach the fish farming process orphange pupils and (2) show how fish farming can be a solid earning source in a land of rivers
+              <br/> <br/>              
+            </p>
+          </div>
+        </article>
+      </div>
+      <div class="clear"></div>
+    </section>
+  </div>
+
+<!-- ################################################################################################ -->
+<div id="cth" class="wrapper row4">
+    <section id="cta" class="clear"> 
+      <div class="center btmspace-50">
+        <h2 class="nospace">Essay Competition</h2>
+      </div>
+      <div class="first">
+        <article class="group"> 
+          <div>
+            <p class="contentfont">
+              Please <a href="forms/UddamEssayContest-2017.pdf">download the rules and topic for competition here.</a> 
+              <br/> <br/>
+              The essay competition is open to High School Students. 
+              <ul>
+                  <li>First Prize: 2,000 taka</li>
+                  <li>Second Prize: 1,500 taka</li>
+                  <li>Third Prize: 1,000 taka</li>
+                  <li>Prize forposition 4 - 10: 300 taka each</li>
+                  <li>Prize forposition 11 - 20: 200 taka each</li>
+              </ul>
+              <br/> <br/>              
+            </p>
+          </div>
+        </article>
+      </div>
+      <div class="clear"></div>
+    </section>
+  </div>
+
+<!-- ################################################################################################ -->
+<div id="cti" class="wrapper row4">
+    <section id="cta" class="clear"> 
+      <div class="center btmspace-50">
+        <h2 class="nospace">Literacy Program</h2>
+      </div>
+      <div class="first">
+        <article class="group"> 
+          <div>
+            <p class="contentfont">
+              Uddam runs basic literacy program for the <a href="https://en.wikipedia.org/wiki/Harijan">Harijan people</a> - one of the lowest caste of Hindus in the region.
+              <br/> <br/>              
+            </p>
+          </div>
+        </article>
+      </div>
+      <div class="clear"></div>
+    </section>
+  </div>
+
+  <!-- ################################################################################################ -->
+<div id="ctj" class="wrapper row4">
+    <section id="cta" class="clear"> 
+      <div class="center btmspace-50">
+        <h2 class="nospace"></h2>
+      </div>
+      <div class="first">
+        <article class="group"> 
+          <div>
+            <p class="contentfont">
+             
+              <br/> <br/>              
+            </p>
+          </div>
+        </article>
+      </div>
+      <div class="clear"></div>
+    </section>
+  </div>
+
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row5">
+  <footer id="footer" class="clear"> 
+    <!-- ################################################################################################ -->
+    <div class="one_half first">
+        <h6 class="title">ABOUT UDDAM</h6>
+      <p class="nospace btmspace-30">
+        Uddam Foundation has started its journey with the vow of the welfare for humanity, stand by the distressed, the impoverished and the underprivileged.
+      </p>
+      <p><a href="mailto:uddam@outlook.com">uddam@outlook.com</a></p>
+    </div>
+    
+    <div class="one_half">
+      <h6 class="title">Keep in Touch</h6>
+      <p><b>Head Office:</b><br/>
+         Harun Plaza, Puranbazar, Madaripur
+      </p>
+      <p>
+        <b>Co-ordination Office:</b><br/> 
+        15/2, Islampur Road, Islampur <br/>
+        Dhaka-1100
+      </p>
+      <p>
+        <b>Telephone:</b><br/> +880 2 8122128, +880 2 7391446 
+      </p>
+      <p>
+        <b>Fax: </b><br/>+880 2 9126859
+      </p>
+    </div>
+    <!-- ################################################################################################ -->
+  </footer>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row6">
+  <div id="copyright" class="clear"> 
+    <!-- ################################################################################################ -->
+    <p class="fl_left">Copyright &copy; 2018 - All Rights Reserved - <a href="#">Uddam Foundation</a></p>
+    <!-- ################################################################################################ -->
+  </div>
+</div>
+<!-- JAVASCRIPTS -->
+<script src="layout/scripts/jquery.min.js"></script> 
+<script src="layout/scripts/jquery.mobilemenu.js"></script>
+</body>
+</html>
