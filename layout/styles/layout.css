@@ -65,8 +65,8 @@ File: Layout CSS
 --------------------------------------------------------------------------------------------------------------- */
 #intro{padding:120px 0;}
 
-#intro article{text-align:center; opacity:.8;}
-#intro article:hover{opacity:1;}
+#intro article{text-align:center; opacity:1;}
+#intro article:hover{opacity:.8;}
 #intro article *{display:block; width:100%; margin:0; padding:0; box-sizing:border-box;}
 #intro article .heading{padding:30px 25px; font-size:18px;}
 #intro article ul{padding:0px 0px; font-style:italic;}
