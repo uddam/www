@@ -434,12 +434,12 @@ table a, #comments a{background-color:inherit;}
 }
 
 
-.gfg { 
+.innerbodyphoto { 
      width:auto; 
      text-align:center; 
      padding:20px; 
 } 
-.gfg img { 
+.innerbodyphoto img { 
      max-width:100%; 
      height:auto; 
 } 
